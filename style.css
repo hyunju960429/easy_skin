@@ -23,6 +23,10 @@ body {
     display: block;
     padding: 12px 20px;
 }
+.main_button:hover {
+    background-color: #2563eb;
+    border-radius: .5rem;
+}
 
 
 /* 타이틀 */
