@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카페24 이지스킨 가이드 - 스마트배너</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="title">3. 스마트배너 설정</h1>
+        
+        <div class="content-container">
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-text">
+                        왼쪽 메뉴에서 <span class="highlight">스마트 배너</span> 항목을 클릭합니다.
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">
+                        초기 배너는 3개 자동 생성되어 있으며 <br> 각 배너를 선택 시 한 개씩 편집가능 합니다.
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">
+                        메인비주얼 중 한가지를 선택 후 <br> 'PC 직접변경', '모바일 직접변경' 을 통해 <br> 준비된 배너이미지를 등록합니다.
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-text">
+                        배너 클릭 시 상품으로 이동 필요할 경우 하단의 링크를 '사용함'으로 변경 후 이동할 상품을 선택하여 '적용'
+                        <span class="highlight">저장 버튼</span>을 눌러 배너 설정을 완료합니다.
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-text">
+                    
+                        <span class="highlight">저장 버튼</span>을 눌러 배너 설정을 완료합니다.
+                    </div>
+                </div>
+
+                <div class="note">
+                    <i class="fas fa-lightbulb mr-2 text-yellow-600"></i>
+                    스마트배너는 쇼핑몰의 첫인상을 결정하는 중요한 요소입니다. <br> 고화질 이미지를 사용하세요.
+                </div>
+            </div>
+            
+            <div class="image-container">
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-slides" id="carouselSlides">
+                            <div class="carousel-slide">
+                                <img src="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/v1/11a5cf5a-31c2-4bb4-a122-7e0f08ecfca2" alt="스마트배너 설정 화면 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/v1/11a5cf5a-31c2-4bb4-a122-7e0f08ecfca2" alt="스마트배너 설정 화면 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/v1/11a5cf5a-31c2-4bb4-a122-7e0f08ecfca2" alt="스마트배너 설정 화면 3">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/v1/11a5cf5a-31c2-4bb4-a122-7e0f08ecfca2" alt="스마트배너 설정 화면 4">
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-nav carousel-prev" onclick="previousSlide()">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-nav carousel-next" onclick="nextSlide()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="carousel-indicators">
+                        <span class="carousel-indicator active" onclick="goToSlide(0)"></span>
+                        <span class="carousel-indicator" onclick="goToSlide(1)"></span>
+                        <span class="carousel-indicator" onclick="goToSlide(2)"></span>
+                        <span class="carousel-indicator" onclick="goToSlide(3)"></span>
+                    </div>
+                    
+                    <div class="carousel-caption">
+                        <i class="fas fa-image text-blue-500 mr-2"></i>
+                        스마트배너 설정 과정
+                    </div>
+                    
+                    <div class="carousel-step-info">
+                        <div class="step-label" id="stepLabel">1단계: 스마트배너 항목 클릭</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const stepLabels = [
+            '1단계: 스마트배너 항목 클릭',
+            '2단계: 배너 위치 선택',
+            '3단계: 배너 이미지 업로드',
+            '4단계: 저장하여 완료'
+        ];
+
+        function updateSlide() {
+            const slidesContainer = document.getElementById('carouselSlides');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            const stepLabel = document.getElementById('stepLabel');
+            
+            // 슬라이드 이동
+            const translateX = -currentSlide * 100;
+            slidesContainer.style.transform = `translateX(${translateX}%)`;
+            
+            // 인디케이터 업데이트
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
+            
+            // 스텝 라벨 업데이트
+            stepLabel.textContent = stepLabels[currentSlide];
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlide();
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlide();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
+        }
+
+        // 자동 슬라이드 (선택사항)
+        // setInterval(nextSlide, 4000);
+    </script>
+
+            <!-- 이전/다음 버튼 -->
+    <a href="index4.html" class="prev-button">← 이전</a>
+    <a href="index6.html" class="next-button">다음 →</a>
+</body>
+</html>
