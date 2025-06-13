@@ -111,6 +111,23 @@ body {
     line-height: 1.4;
 }
 
+.steps-container::-webkit-scrollbar {
+  width: 12px; /* 스크롤바 너비 */
+}
+
+.steps-container::-webkit-scrollbar-track {
+  background: transparent; /* 트랙 배경 */
+  border-radius: 15px;
+  margin: 17px;
+}
+
+.steps-container::-webkit-scrollbar-thumb {
+  background-color: rgba(59, 130, 246, 0.5); /* 스크롤바 색상 */
+  border-radius: 10px;
+  border: 3px solid white; /* 내부에 여백 주기 위해 */
+}
+
+
 /* 강조 텍스트 */
 .highlight {
     color: #3b82f6;
