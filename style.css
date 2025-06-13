@@ -112,7 +112,7 @@ body {
 }
 
 .steps-container::-webkit-scrollbar {
-  width: 12px; /* 스크롤바 너비 */
+  width: 14px; /* 스크롤바 너비 */
 }
 
 .steps-container::-webkit-scrollbar-track {
