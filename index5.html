@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카페24 이지스킨 가이드 - 스마트배너</title>
+    <link rel="shortcut icon" href="https://img.echosting.cafe24.com/imgcafe24com/favicon/cafe24.ico"
+        type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="imageModal" class="modal-overlay">
         <div class="modal-content">
-            <!-- 닫기 버튼(X) -->
+            <button id="modalPrevBtn" class="modal-nav modal-prev">&lsaquo;</button>
+            <button id="modalNextBtn" class="modal-nav modal-next">&rsaquo;</button>
             <button id="modalCloseBtn" class="modal-close-btn">&times;</button>
-            <!-- 확대해서 보여줄 이미지 -->
             <img id="modalImg" src="" alt="확대 이미지" />
         </div>
     </div>
+
+
+
     <div class="main-container">
-        <h1 class="title">3. 스마트배너 설정</h1>
-        
+        <h1 class="title">3. 스마트배너 설정하기</h1>
+
         <div class="content-container">
             <div class="steps-container">
                 <div class="step">
@@ -28,33 +35,33 @@
                         왼쪽 메뉴에서 <span class="highlight">스마트 배너</span> 항목을 클릭합니다.
                     </div>
                 </div>
-                
+
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-text">
                         초기 배너는 3개 자동 생성되어 있으며 <br> 각 배너를 선택 시 한 개씩 편집가능 합니다.
                     </div>
                 </div>
-                
+
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-text">
                         메인비주얼 중 한가지를 선택 후 <br> 'PC 직접변경', '모바일 직접변경' 을 통해 <br> 준비된 배너이미지를 등록합니다.
                     </div>
                 </div>
-                
+
                 <div class="step">
                     <div class="step-number">4</div>
                     <div class="step-text">
-                        배너 클릭 시 상품으로 이동 필요할 경우 하단의 링크를 '사용함'으로 변경 후 이동할 상품을 선택하여 '적용'
-                        <span class="highlight">저장 버튼</span>을 눌러 배너 설정을 완료합니다.
+                        배너 클릭 시 상품으로 이동 필요할 경우 <br> 하단의 링크를 '사용함'으로 변경 후 <br> 이동할 상품 혹은 게시글을 선택하여
+                        <span class="highlight">적용 버튼</span>을 눌러 <br> 배너 설정을 완료합니다.
                     </div>
                 </div>
-                
+
                 <div class="step">
                     <div class="step-number">5</div>
                     <div class="step-text">
-                    
+
                         <span class="highlight">저장 버튼</span>을 눌러 배너 설정을 완료합니다.
                     </div>
                 </div>
@@ -64,25 +71,43 @@
                     스마트배너는 쇼핑몰의 첫인상을 결정하는 중요한 요소입니다. <br> 고화질 이미지를 사용하세요.
                 </div>
             </div>
-            
+
             <div class="image-container">
                 <div class="carousel-container">
                     <div class="carousel-wrapper">
                         <div class="carousel-slides" id="carouselSlides">
                             <div class="carousel-slide">
-                                <img src="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/v1/11a5cf5a-31c2-4bb4-a122-7e0f08ecfca2" alt="스마트배너 설정 화면 1">
+                                <img src="./3 스마트배너/1 스마트배너 클릭 시.png" alt="스마트배너 설정 화면 1">
                             </div>
                             <div class="carousel-slide">
-                                <img src="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/v1/11a5cf5a-31c2-4bb4-a122-7e0f08ecfca2" alt="스마트배너 설정 화면 2">
+                                <img src="./3 스마트배너/2 스마트배너 PC,MO 이미지업로드한 모습.png" alt="스마트배너 설정 화면 2">
                             </div>
                             <div class="carousel-slide">
-                                <img src="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/v1/11a5cf5a-31c2-4bb4-a122-7e0f08ecfca2" alt="스마트배너 설정 화면 3">
+                                <img src="./3 스마트배너/3 배너 링크 적용(1).png" alt="스마트배너 설정 화면 3">
                             </div>
                             <div class="carousel-slide">
-                                <img src="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/v1/11a5cf5a-31c2-4bb4-a122-7e0f08ecfca2" alt="스마트배너 설정 화면 4">
+                                <img src="./3 스마트배너/4 배너 링크 적용(2).png" alt="스마트배너 설정 화면 4">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./3 스마트배너/5 배너 링크 적용(3).png" alt="스마트배너 설정 화면 5">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./3 스마트배너/6 적용완.png" alt="스마트배너 설정 화면 6">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./3 스마트배너/7 배너 3개 초과 등록 필요 시.png" alt="스마트배너 설정 화면 7">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./3 스마트배너/8 초과등록.png" alt="스마트배너 설정 화면 8">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./3 스마트배너/9 배너순서편집(1).png" alt="스마트배너 설정 화면 9">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./3 스마트배너/9 배너순서편집(2).png" alt="스마트배너 설정 화면 10">
                             </div>
                         </div>
-                        
+
                         <button class="carousel-nav carousel-prev" onclick="previousSlide()">
                             <i class="fas fa-chevron-left"></i>
                         </button>
@@ -90,21 +115,27 @@
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
-                    
+
                     <div class="carousel-indicators">
                         <span class="carousel-indicator active" onclick="goToSlide(0)"></span>
                         <span class="carousel-indicator" onclick="goToSlide(1)"></span>
                         <span class="carousel-indicator" onclick="goToSlide(2)"></span>
                         <span class="carousel-indicator" onclick="goToSlide(3)"></span>
+                        <span class="carousel-indicator" onclick="goToSlide(4)"></span>
+                        <span class="carousel-indicator" onclick="goToSlide(5)"></span>
+                        <span class="carousel-indicator" onclick="goToSlide(6)"></span>
+                        <span class="carousel-indicator" onclick="goToSlide(7)"></span>
+                        <span class="carousel-indicator" onclick="goToSlide(8)"></span>
+                        <span class="carousel-indicator" onclick="goToSlide(9)"></span>
                     </div>
-                    
+
                     <div class="carousel-caption">
                         <i class="fas fa-image text-blue-500 mr-2"></i>
                         스마트배너 설정 과정
                     </div>
-                    
+
                     <div class="carousel-step-info">
-                        <div class="step-label" id="stepLabel">1단계: 스마트배너 항목 클릭</div>
+                        <div class="step-label" id="stepLabel">1단계: 스마트배너 항목 클릭 후 배너목록 확인</div>
                     </div>
                 </div>
             </div>
@@ -113,28 +144,34 @@
 
     <script>
         let currentSlide = 0;
-        const totalSlides = 4;
+        const totalSlides = 10;
         const stepLabels = [
-            '1단계: 스마트배너 항목 클릭',
-            '2단계: 배너 위치 선택',
-            '3단계: 배너 이미지 업로드',
-            '4단계: 저장하여 완료'
+            '1단계: 스마트배너 항목 클릭 후 배너목록 확인',
+            '2단계: 스마트배너 PC,MO 이미지업로드 후 "적용"하여 완료',
+            '3단계: 생성된 배너에 링크 적용 필요 시 - 링크 "사용함" 선택, 상품 혹은 게시글 선택',
+            '4단계: "적용" 버튼을 클릭"',
+            '5단계: 현재탭에서 이동 혹은 새탭 열기 중 선택',
+            '6단계: 배너링크 적용완료',
+            '7단계: 배너 4개 이상 등록 필요 시 - 배너목록화면에서 "배너등록" 선택 후 "사용함" 설정',
+            '8단계: 배너 이미지 등록 후 "적용"',
+            '9단계: 배너 순서조정 필요 시 - "순서편집" 선택',
+            '10단계: 배너를 드래그하여 순서 조정 후 "적용"',
         ];
 
         function updateSlide() {
             const slidesContainer = document.getElementById('carouselSlides');
             const indicators = document.querySelectorAll('.carousel-indicator');
             const stepLabel = document.getElementById('stepLabel');
-            
+
             // 슬라이드 이동
             const translateX = -currentSlide * 100;
             slidesContainer.style.transform = `translateX(${translateX}%)`;
-            
+
             // 인디케이터 업데이트
             indicators.forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === currentSlide);
             });
-            
+
             // 스텝 라벨 업데이트
             stepLabel.textContent = stepLabels[currentSlide];
         }
@@ -160,8 +197,9 @@
 
     <script src="main.js"></script>
 
-            <!-- 이전/다음 버튼 -->
+    <!-- 이전/다음 버튼 -->
     <a href="index4.html" class="prev-button">← 이전</a>
     <a href="index6.html" class="next-button">다음 →</a>
 </body>
+
 </html>
