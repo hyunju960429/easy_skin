@@ -404,6 +404,7 @@ body {
     display: flex;
     justify-content: center;
     border-radius: 4px;
+    line-height: 135%;
 }
 
 .modal-prev {
